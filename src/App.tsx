@@ -36,16 +36,16 @@ function App() {
       
     </div>
     
-    <div>
+    <div style={{marginTop:'150px'}}>
       <p style={{fontFamily:'sans-serif', fontSize:'30px'}}>
         {sentences[currentSentence].question}
       </p>
-      
-    </div>
-    <div>
-    <ul>
+      <ul>
       {possibleAnswers.map((ans)=><button className="answers" disabled={isDisabled} key={sentences[currentSentence].choices.indexOf(ans)} onClick = {() => onAnswer(ans)}>{ans}</button>)}
     </ul>
+    </div>
+    <div>
+    
     <button className="next" onClick = {()=> onNext()}>next</button>
     </div>
       
